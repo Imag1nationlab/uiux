@@ -1,1 +1,119 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
+.header{
+    display: grid;
+    grid-template-columns: 19% 81%;
+
+}
+
+
+.profile .profile-avatar{
+    text-align: center;
+}
+.profile .profile-container{
+
+    width: 30;
+    margin: auto;
+    font-size: 1.3rem;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 1px;
+    padding: 30px 0%;
+    
+   
+}
+
+.tittle{
+    text-align: center;
+}
+
+.tittle h1{
+    font-size: 1.5rem;
+}
+.tittle h2{
+    font-size: 1rem;
+}
+
+.social-media{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.social-media a i{
+    color: black;
+}
+
+.social-media a i:hover{ opacity: 1; color: orangered;}
+
+.navbar{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-size: 0.9rem;
+    align-items: center;
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
+
+.navbar a:hover{opacity:  1; color: orangered;}
+
+
+
+
+
+/***********/
+.gallery{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    height: auto;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr)); /* Responsive grid columns */
+    gap: 10px; /* Adjust the gap between images */
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 1px;
+  }
+
+
+  
+  .image-gallery {
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  .image-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images fill their container */
+    padding: 6px 6px;
+  }
+
+  .page-number{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 0 100%;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 1px;
+  }
+  .page-number a{
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    font-size: 1.8rem;
+  }
+.page-number a:hover{opacity:  1; color: orangered;}
+  
