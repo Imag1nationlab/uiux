@@ -4,24 +4,20 @@ body{
 
 .header{
     display: grid;
-    grid-template-columns: 19% 81%;
-
-}
-
-
-.profile .profile-avatar{
-    text-align: center;
+    grid-template-columns: 15% 85%;
+    
 }
 .profile .profile-container{
 
-    width: 30;
+    width: 100%;
     margin: auto;
     font-size: 1.3rem;
     border: 1px solid rgb(78, 78, 78);
-    border-radius: 1px;
-    padding: 30px 0%;
-    
-   
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.profile .profile-avatar{
+    text-align: center;
 }
 
 .tittle{
@@ -29,16 +25,13 @@ body{
 }
 
 .tittle h1{
-    font-size: 1.9rem;
-}
-.tittle h2{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .social-media{
     text-align: center;
     margin: 10px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .social-media a i{
@@ -60,7 +53,7 @@ body{
 .navbar a{
     text-decoration: none;
     color: black;
-    padding: 5px 0;
+    padding: 3px 0;
     font-size: 1rem;
 }
 .navbar a:hover{opacity:  1; color: orangered;}
@@ -70,51 +63,129 @@ body{
 
 
 /***********/
-.gallery{
-    width: 100%;
-    display: flex;
-    position: absolute;
-    height: auto;
-}
+
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr)); /* Responsive grid columns */
-    gap: 10px; /* Adjust the gap between images */
-    border: 1px solid rgb(78, 78, 78);
-    border-radius: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr)); 
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 10px 10px;
   }
 
-
-  
   .image-gallery {
     position: relative;
     overflow: hidden;
-    
   }
   
   .image-gallery img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure images fill their container */
-    padding: 6px 6px;
+    object-fit: cover; 
+    padding: 3px 3px;
   }
 
   .page-number{
-    display: flex;
-    position: relative;
     width: 100%;
     height: auto;
-    justify-content: center;
-    margin: 0 100%;
-    border: 1px solid rgb(78, 78, 78);
     border-radius: 1px;
+    padding: 10px 0 ;
+    display: flex;
+    margin-left: 100%;
   }
+
   .page-number a{
     text-decoration: none;
     color: black;
     padding: 0 10px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 .page-number a:hover{opacity:  1; color: orangered;}
-  
+
+
+@media (min-width: 300px){
+
+    .header{
+        display: grid;
+        grid-template-columns: 22% 78%;
+    }
+    .tittle h1{
+        font-size: 0.3rem;
+    }
+    .social-media{
+        font-size: 0.20rem;
+    }
+
+    .navbar a{
+        font-size: 0.25rem;
+    }
+    .page-number a{
+        font-size: 0.25rem;
+      }
+}
+
+@media (min-width: 568px){
+
+    .header{
+        display: grid;
+        grid-template-columns: 15% 85%;
+    }
+    .tittle h1{
+        font-size: 0.4rem;
+    }
+    .social-media{
+        font-size: 0.30rem;
+    }
+
+    .navbar a{
+        font-size: 0.35rem;
+    }
+    .page-number a{
+        font-size: 0.35rem;
+      }
+}
+
+@media (min-width: 1024px){
+
+    .header{
+        display: grid;
+        grid-template-columns: 15% 85%;
+    }
+    .tittle h1{
+        font-size: 0.7rem;
+    }
+    .social-media{
+        font-size: 0.55rem;
+    }
+
+    .navbar a{
+        font-size: 0.6rem;
+    }
+    .page-number a{
+        font-size: 0.6rem;
+      }
+}
+
+@media (min-width: 1920px){
+
+    .header{
+        display: grid;
+        grid-template-columns: 15% 85%;
+    }
+    .tittle h1{
+        font-size: 1.3rem;
+    }
+    .social-media{
+        font-size: 0.9rem;
+    }
+
+    .navbar a{
+        font-size: 1rem;
+    }
+    .page-number a{
+        font-size: 1rem;
+      }
+}
+
+
