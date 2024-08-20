@@ -1,155 +1,279 @@
-@media screen and (max-width: 300px){
-    .header{
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+      
+
+.box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.profile-box{
+    position: relative;
+    padding: 0% 1%;
+
+}
+
+.tittle{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.social-media{
+    font-size: 1.5rem;
+}
+
+.social-media a i{
+    color: black;
+
+}
+
+.social-media a i:hover{ opacity: 1; color: orangered;}
+
+.navbar{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    
+}
+
+.navbar a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #1e1e1e;
+}
+.navbar a:hover{opacity:  1; color: orangered;}
+
+.dropbtn {
+    color: #1e1e1e;
+    font-size: 1rem;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+ 
+  .dropdown-content {
+    display: none;
+    width: 100%;
+  }
+  .dropdown-content ul{
+    margin: 0;
+    padding: 0; 
+  }
+ .dropdown-content ul li{
+    display: flex;
+    flex-direction: column;
+    list-style: none;  
+ }
+
+ .dropdown-content ul li a{
+    font-size: 0.9rem;
+ }
+
+
+  
+  .dropdown:hover .dropdown-content {display: block;}
+
+/***********/
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-sizing: border-box;
+    border: 0.1px solid black;
+    border-radius: 3px;
+  }
+
+  .image-gallery {
+    flex: 1 1 calc(33.33% - 10px); /* 3 items per row, with space between */
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px 10px;
+
+  }
+  
+  .image-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    width: 100%;
+  }
+
+  .image-gallery .h3{
+    width: 100%;
+    position: relative;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 0;
+
+  }
+
+
+  .image-gallery:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.01); 
+  }
+.page-number a:hover{opacity:  1; color: orangered;}
+
+
+@media  (max-width: 300px){
+    .box{
         padding: 0;
         margin: 0;
     }
     
-    .tittle{
-        font-size: 0.1rem;
+    .tittle h1{
+        font-size: 0.6rem;
     }
-    .home a {
-        font-size: 0.1rem;
+    .box .profile-box .navbar .home a {
+        font-size: 0.6rem;
     }
-    .gp a{
-        font-size: 0.1rem;
+    .box .profile-box .navbar .gp a{
+        font-size: 0.6rem;
     }
     
-    .ui a{
-        font-size: 0.1rem;
+    .box .profile-box .navbar .ui a{
+        font-size: 0.6rem;
     }
-    .cine a{
-        font-size: 0.1rem;
+    .box .profile-box .navbar .cine a{
+        font-size: 0.6rem;
     }
-    .dropbtn a{
-        font-size: 0.1rem;
+    .box .profile-box .navbar .dropbtn a{
+        font-size: 0.6rem;
     }
     .dropdown-content ul li a{
-        font-size: 0.1rem;
+        font-size: 0.6rem;
+
     }
 
-}
-
-@media screen and (max-width: 375px){
-.header{
-    padding: 0;
-    margin: 0;
-}
-
-.tittle{
-    font-size: 0.5rem;
-}
-.home a {
-    font-size: 0.5rem;
-}
-.gp a{
-    font-size: 0.5rem;
-}
-
-.ui a{
-    font-size: 0.5rem;
-}
-.cine a{
-    font-size: 0.5rem;
-}
-.dropbtn a{
-    font-size: 0.5rem;
-}
-.dropdown-content ul li a{
-    font-size: 0.5rem;
-}
-
+    .image-gallery {
+        flex: 1 1 calc(100% - 10px);
+    }
+    .gallery-container .image-gallery .h3{
+        font-size: 0.6rem;
+    }
 }
 
 
 @media (max-width: 576px){
-    .header{
+    .box{
         padding: 0;
         margin: 0;
     }
     
-    .tittle{
-        font-size: 0.5rem;
+    .tittle h1{
+        font-size: 0.6rem;
     }
-    .home a {
-        font-size: 0.5rem;
+    .box .profile-box .navbar .home a {
+        font-size: 0.6rem;
     }
-    .gp a{
-        font-size: 0.5rem;
+    .box .profile-box .navbar .gp a{
+        font-size: 0.6rem;
     }
     
-    .ui a{
-        font-size: 0.5rem;
+    .box .profile-box .navbar .ui a{
+        font-size: 0.6rem;
     }
-    .cine a{
-        font-size: 0.5rem;
+    .box .profile-box .navbar .cine a{
+        font-size: 0.6rem;
     }
-    .dropbtn a{
-        font-size: 0.5rem;
+    .box .profile-box .navbar .dropbtn a{
+        font-size: 0.6rem;
     }
     .dropdown-content ul li a{
-        font-size: 0.5rem;
+        font-size: 0.6rem;
+
     }
 
-   
+    .image-gallery {
+        flex: 1 1 calc(100% - 0px);
+    }
+    .gallery-container .image-gallery .h3{
+        font-size: 0.6rem;
+    }
 }
 @media (max-width: 768px){
-    .header{
+    .box{
         padding: 0;
         margin: 0;
     }
     
-    .tittle{
-        font-size: 0.6rem;
+    .tittle h1{
+        font-size: 0.1rem;
     }
-    .home a {
-        font-size: 0.6rem;
+    .box .profile-box .navbar .home a {
+        font-size: 1rem;
     }
-    .gp a{
-        font-size: 0.6rem;
+    .box .profile-box .navbar .gp a{
+        font-size: 1rem;
     }
     
-    .ui a{
-        font-size: 0.6rem;
+    .box .profile-box .navbar .ui a{
+        font-size: 1rem;
     }
-    .cine a{
-        font-size: 0.6rem;
+    .box .profile-box .navbar .cine a{
+        font-size: 1rem;
     }
-    .dropbtn a{
-        font-size: 0.6rem;
+    .box .profile-box .navbar .dropbtn a{
+        font-size: 1rem;
     }
     .dropdown-content ul li a{
+        font-size: 1rem;
+
+    }
+
+    
+    .gallery-container .image-gallery .h3{
         font-size: 0.6rem;
     }
-    
 }
 
 @media (max-width: 1400px){
-    .header{
+    .box{
         padding: 0;
         margin: 0;
     }
     
-    .tittle{
+    .tittle h1{
         font-size: 1rem;
     }
-    .home a {
+    .box .profile-box .navbar .home a {
         font-size: 1rem;
     }
-    .gp a{
+    .box .profile-box .navbar .gp a{
         font-size: 1rem;
     }
     
-    .ui a{
+    .box .profile-box .navbar .ui a{
         font-size: 1rem;
     }
-    .cine a{
+    .box .profile-box .navbar .cine a{
         font-size: 1rem;
     }
-    .dropbtn a{
+    .box .profile-box .navbar .dropbtn a{
         font-size: 1rem;
     }
     .dropdown-content ul li a{
         font-size: 1rem;
+
     }
+
    
+    .gallery-container .image-gallery .h3{
+        font-size: 0.6rem;
+    }
 }
+
+
