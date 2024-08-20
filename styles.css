@@ -2,42 +2,36 @@ body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
+   
 }
       
 
 .header{
-    display: grid;
-    grid-template-columns: 15% 85%;
-    
-}
-.profile .profile-container{
     width: 100%;
-    margin: auto;
-    border: 1px solid rgb(78, 78, 78);
-    border-radius: 10px;
-    padding: 10px 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+   
 }
-.profile .profile-avatar{
-    text-align: center;
+
+.profile-box{
+    position: relative;
+    padding: 0% 1%;
+
 }
 
 .tittle{
     text-align: center;
-}
-
-.tittle h1{
     font-size: 1rem;
 }
 
 .social-media{
-    text-align: center;
-    margin: 10px 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .social-media a i{
     color: black;
-    padding: 0 3px;
+
 }
 
 .social-media a i:hover{ opacity: 1; color: orangered;}
@@ -46,27 +40,19 @@ body{
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
     
 }
 
 .navbar a{
+    font-size: 1.3rem;
     text-decoration: none;
-    color: black;
-    padding: 3px 0;
-}
-
-.navbar span{
-    font-size: 0.8rem;
-    font-style: bold;
-    padding: 6px 0;
+    color: #1e1e1e;
 }
 .navbar a:hover{opacity:  1; color: orangered;}
 
 .dropbtn {
-    color: rgb(0, 0, 0);
-    
+    color: #1e1e1e;
+    font-size: 1rem;
     border: none;
   }
   
@@ -74,35 +60,39 @@ body{
     position: relative;
     display: inline-block;
   }
-  
+ 
   .dropdown-content {
     display: none;
-    position: relative;
-    background-color: #ffffff;
+    width: 100%;
   }
+  .dropdown-content ul{
+    margin: 0;
+    padding: 0; 
+  }
+ .dropdown-content ul li{
+    display: flex;
+    flex-direction: column;
+    list-style: none;  
+ }
 
-  .dropdown-content a {
-    color: black;
-    padding: 10px 0;
-    text-decoration: none;
-    display: block;
-    font: 0.5rem;
-  }
-  
+ .dropdown-content ul li a{
+    font-size: 0.9rem;
+ }
+
 
   
   .dropdown:hover .dropdown-content {display: block;}
-  .dropdown-content a:hover{text-decoration: underline;}
 
 /***********/
 
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1px, 1fr)); 
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    border: 0.1px solid rgb(0, 0, 0);
+    border-radius: 3px;
     margin-left: 5px;
     padding: 10px 10px;
+    width: 100%;
   }
 
   .image-gallery {
@@ -135,62 +125,156 @@ body{
   }
 .page-number a:hover{opacity:  1; color: orangered;}
 
+@media screen and (max-width: 300px){
+    .header{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .tittle{
+        font-size: 0.1rem;
+    }
+    .home a {
+        font-size: 0.1rem;
+    }
+    .gp a{
+        font-size: 0.1rem;
+    }
+    
+    .ui a{
+        font-size: 0.1rem;
+    }
+    .cine a{
+        font-size: 0.1rem;
+    }
+    .dropbtn a{
+        font-size: 0.1rem;
+    }
+    .dropdown-content ul li a{
+        font-size: 0.1rem;
+    }
+    }
+
+@media screen and (max-width: 375px){
+.header{
+    padding: 0;
+    margin: 0;
+}
+
+.tittle{
+    font-size: 0.5rem;
+}
+.home a {
+    font-size: 0.5rem;
+}
+.gp a{
+    font-size: 0.5rem;
+}
+
+.ui a{
+    font-size: 0.5rem;
+}
+.cine a{
+    font-size: 0.5rem;
+}
+.dropbtn a{
+    font-size: 0.5rem;
+}
+.dropdown-content ul li a{
+    font-size: 0.5rem;
+}
+}
+
 
 @media (max-width: 576px){
-
     .header{
-        display: grid;
-        grid-template-columns: 22% 78%;
+        padding: 0;
+        margin: 0;
     }
-    .tittle h1{
+    
+    .tittle{
         font-size: 0.5rem;
     }
-    .social-media{
-       font-size: 0.5rem;
+    .home a {
+        font-size: 0.5rem;
     }
-    .navbar span{
+    .gp a{
+        font-size: 0.5rem;
+    }
+    
+    .ui a{
+        font-size: 0.5rem;
+    }
+    .cine a{
+        font-size: 0.5rem;
+    }
+    .dropbtn a{
+        font-size: 0.5rem;
+    }
+    .dropdown-content ul li a{
         font-size: 0.5rem;
     }
    
-    }
-   
-   
-
+}
 @media (max-width: 768px){
-
     .header{
-        display: grid;
-        grid-template-columns: 15% 85%;
+        padding: 0;
+        margin: 0;
     }
-    .tittle h1{
-        font-size: 0.6rem;
+    
+    .tittle{
+        font-size: 0.5rem;
     }
-    .social-media{
-       font-size: 0.6rem;
+    .home a {
+        font-size: 0.5rem;
     }
-    .navbar span{
-        font-size: 0.6rem;
+    .gp a{
+        font-size: 0.5rem;
+    }
+    
+    .ui a{
+        font-size: 0.5rem;
+    }
+    .cine a{
+        font-size: 0.5rem;
+    }
+    .dropbtn a{
+        font-size: 0.5rem;
+    }
+    .dropdown-content ul li a{
+        font-size: 0.5rem;
     }
    
 }
 
 @media (max-width: 1400px){
-
     .header{
-        display: grid;
-        grid-template-columns: 15% 85%;
+        padding: 0;
+        margin: 0;
     }
-    .tittle h1{
-        font-size: 1.3rem ;
+    
+    .tittle{
+        font-size: 0.5rem;
     }
-    .social-media{
-        font-size: 1rem ;
+    .home a {
+        font-size: 0.5rem;
     }
-
-    .navbar span{
-        font-size: 1rem;
+    .gp a{
+        font-size: 0.5rem;
     }
- 
+    
+    .ui a{
+        font-size: 0.5rem;
+    }
+    .cine a{
+        font-size: 0.5rem;
+    }
+    .dropbtn a{
+        font-size: 0.5rem;
+    }
+    .dropdown-content ul li a{
+        font-size: 0.5rem;
+    }
 }
 
 
