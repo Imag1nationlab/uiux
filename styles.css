@@ -119,15 +119,6 @@ body{
 
   }
 
-
-  .image-gallery:hover{
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.01); 
-  }
-.page-number a:hover{opacity:  1; color: orangered;}
-
-
 @media  (max-width: 300px){
     .box{
         padding: 0;
