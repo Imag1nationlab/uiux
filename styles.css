@@ -11,27 +11,12 @@ body{
     height: auto;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+  
 }
 
 .profile-box{
     position: relative;
-    padding: 0% 1%;
-
-}
-
-.tittle{
-    text-align: center;
-    font-size: 1rem;
-}
-
-.social-media{
-    font-size: 1.5rem;
-}
-
-.social-media a i{
-    color: black;
-
+    padding-right: 1%;
 }
 
 .social-media a i:hover{ opacity: 1; color: orangered;}
@@ -44,61 +29,58 @@ body{
 }
 
 .navbar a{
-    font-size: 1.3rem;
     text-decoration: none;
     color: #1e1e1e;
+}
+
+.navbar button{
+    border: none;
+    background-color: transparent;
 }
 .navbar a:hover{opacity:  1; color: orangered;}
 
 .dropbtn {
-    color: #1e1e1e;
-    font-size: 1rem;
+    color: rgb(0, 0, 0);
     border: none;
+    background-color: transparent;
   }
   
   .dropdown {
     position: relative;
     display: inline-block;
+    padding: 10px;
   }
- 
+  
   .dropdown-content {
     display: none;
-    width: 100%;
+    z-index: 1;
   }
-  .dropdown-content ul{
-    margin: 0;
-    padding: 0; 
-  }
- .dropdown-content ul li{
-    display: flex;
-    flex-direction: column;
-    list-style: none;  
- }
-
- .dropdown-content ul li a{
-    font-size: 0.9rem;
- }
-
-
   
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown-content a {
+    color: black;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: block;
+
+  }
+
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown a button:hover{color: orangered;}
+  
+
 
 /***********/
 
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    box-sizing: border-box;
-    border: 0.1px solid black;
-    border-radius: 3px;
   }
 
   .image-gallery {
     flex: 1 1 calc(33.33% - 10px); /* 3 items per row, with space between */
     box-sizing: border-box;
     position: relative;
-    padding: 10px 10px;
 
   }
   
@@ -107,7 +89,6 @@ body{
     width: 100%;
     height: auto;
     object-fit: cover; 
-    width: 100%;
   }
 
   .image-gallery .h3{
@@ -119,151 +100,29 @@ body{
 
   }
 
-@media  (max-width: 300px){
-    .box{
-        padding: 0;
-        margin: 0;
-    }
+
+ 
+
+  @media  (min-width: 300px){
+ 
     
-    .tittle h1{
-        font-size: 0.6rem;
+    .tittle{
+        text-align: center;
     }
-    .box .profile-box .navbar .home a {
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .gp a{
-        font-size: 0.6rem;
-    }
-    
-    .box .profile-box .navbar .ui a{
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .cine a{
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .dropbtn a{
-        font-size: 0.6rem;
-    }
-    .dropdown-content ul li a{
-        font-size: 0.6rem;
-
-    }
-
-    .image-gallery {
-        flex: 1 1 calc(100% - 10px);
-    }
-    .gallery-container .image-gallery .h3{
-        font-size: 0.6rem;
-    }
-}
-
-
-@media (max-width: 576px){
-    .box{
-        padding: 0;
-        margin: 0;
-    }
-    
-    .tittle h1{
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .home a {
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .gp a{
-        font-size: 0.6rem;
-    }
-    
-    .box .profile-box .navbar .ui a{
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .cine a{
-        font-size: 0.6rem;
-    }
-    .box .profile-box .navbar .dropbtn a{
-        font-size: 0.6rem;
-    }
-    .dropdown-content ul li a{
-        font-size: 0.6rem;
-
-    }
-
-    .image-gallery {
-        flex: 1 1 calc(100% - 0px);
-    }
-    .gallery-container .image-gallery .h3{
-        font-size: 0.6rem;
-    }
-}
-@media (max-width: 768px){
-    .box{
-        padding: 0;
-        margin: 0;
-    }
-    
-    .tittle h1{
-        font-size: 0.1rem;
-    }
-    .box .profile-box .navbar .home a {
+    .tittle button{
         font-size: 1rem;
     }
-    .box .profile-box .navbar .gp a{
-        font-size: 1rem;
+    .dropbtn{
+        font-size: 0.9rem;
     }
-    
-    .box .profile-box .navbar .ui a{
-        font-size: 1rem;
-    }
-    .box .profile-box .navbar .cine a{
-        font-size: 1rem;
-    }
-    .box .profile-box .navbar .dropbtn a{
-        font-size: 1rem;
-    }
-    .dropdown-content ul li a{
-        font-size: 1rem;
-
-    }
-
-    
-    .gallery-container .image-gallery .h3{
-        font-size: 0.6rem;
-    }
-}
-
-@media (max-width: 1400px){
-    .box{
-        padding: 0;
-        margin: 0;
-    }
-    
-    .tittle h1{
-        font-size: 1rem;
-    }
-    .box .profile-box .navbar .home a {
-        font-size: 1rem;
-    }
-    .box .profile-box .navbar .gp a{
-        font-size: 1rem;
-    }
-    
-    .box .profile-box .navbar .ui a{
-        font-size: 1rem;
-    }
-    .box .profile-box .navbar .cine a{
-        font-size: 1rem;
-    }
-    .box .profile-box .navbar .dropbtn a{
-        font-size: 1rem;
-    }
-    .dropdown-content ul li a{
-        font-size: 1rem;
-
-    }
-
    
-    .gallery-container .image-gallery .h3{
+    .dropdown .dropdown-content a{
         font-size: 0.6rem;
+
+    }
+
+    .gallery-container .image-gallery .h3{
+        font-size: 0.8rem;
     }
 }
 
