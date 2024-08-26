@@ -3,101 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGINATION</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/078d89ff1e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>IMAGINATION</title>
-
-<body oncontextmenu=" return disableRightClick();">
+</head>
+<body>
+    
     <div class="header">
         <div class="opennav">
-            <span style="cursor:pointer" onclick="openNav()"><i class="fa-regular fa-square-minus"></i></span>
+            <span style="cursor:pointer" onclick="openNav()">&#9776; MENU</span>
         </div>
         <div class="logo">
             <h1>IMAGINATION</h1>
         </div>
     </div>
 
-    <div id="mySidenav" class="sidenav">
+    <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="dropdown-box">
-                <div class="dropdown">
-                    <a href="https://imag1nationlab.github.io/home/"><button class="dropbtn">Home</button></a>
-                        <div class="dropdown-content">
-                      
-                        </div>
-                </div>  
+        <ul class="nav-list">
+            <li class="nav-item dropdown">
+                <a href="https://imag1nationlab.github.io/home/" class="dropdown-toggle">Home</a>
+                <ul class="dropdown-menu">
+         
+                   
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="https://imag1nationlab.github.io/gp/" class="dropdown-toggle" target="_blank">Graphic Design</a>
+                <ul class="dropdown-menu">
 
-                <div class="dropdown">
-                    <a href=""><button class="dropbtn">Graphic Design</button></a>
-                      <div class="dropdown-content">
-                        <a href="https://imag1nationlab.github.io/gp/">Online</a>
-                        <a href="https://imag1nationlab.github.io/gp/">Offline</a>
-                      </div>
-                </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="https://imag1nationlab.github.io/uiux/" class="dropdown-toggle">UI/UX</a>
+                <ul class="dropdown-menu">
 
-                <div class="dropdown">
-                    <a href="https://imag1nationlab.github.io/uiux/"><button class="dropbtn">UI/UX</button></a>
-                      <div class="dropdown-content">
-                          
-                      </div>
-                </div>
+                </ul>
+            </li>
 
-           <div class="dropdown">
-                    <a href=""><button class="dropbtn">Photography</button></a>
-                      <div class="dropdown-content">
-                          <a href="https://imag1nationlab.github.io/beauty/">Beauty</a>
-                          <a href="https://imag1nationlab.github.io/product/">Product</a>
-                          <a href="https://imag1nationlab.github.io/fashion/">Fashion</a>
-                          <a href="https://imag1nationlab.github.io/foodandbeverage/">F&B</a>
-                      </div>
-            </div>
-          
-          <div class="dropdown">
-              <a href="https://imag1nationlab.github.io/cine/"><button class="dropbtn">Cinematography</button></a>
-                  <div class="dropdown-content">
-                      
-                  </div>
-          </div>
-      </div>
-  </div>
+            <li class="nav-item dropdown">
+                <a href="" class="dropdown-toggle">Photography</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://imag1nationlab.github.io/beauty/">People</a></li>
+                    <li><a href="https://imag1nationlab.github.io/product/">Products</a></li>
+                    <li><a href="https://imag1nationlab.github.io/foodandbeverage/">F&B</a></li>
+                </ul>
+            </li>
 
-  
-  <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  </script>  
+            <li class="nav-item dropdown">
+                <a href="https://www.youtube.com/@Imagination-Studio0" class="dropdown-toggle" target="_blank">Videographer</a>
+            
+            </li>
 
-        <div class="gallery-box">
-            <div class="image-gallery">
-                <img src="https://live.staticflickr.com/65535/53858518398_a144c7351f_z.jpg" alt="">
-                <img src="https://live.staticflickr.com/65535/53858272041_50befa62b2_z.jpg" alt="">
-                <img src="https://live.staticflickr.com/65535/53858690630_d75d4ca013_z.jpg" alt="">
-            </div>
-            <div class="image-gallery">
-                <img src="https://live.staticflickr.com/65535/53858272186_035c49d61b_z.jpg" alt="">
-                <img src="https://live.staticflickr.com/65535/53857377282_1c46f1c552_z.jpg" alt="">
-                <img src="https://live.staticflickr.com/65535/53858641284_4c553ede08_z.jpg" alt="">
-            </div>
-            <div class="image-gallery">
-                <img src="https://live.staticflickr.com/65535/53858690590_389cff8107_z.jpg" alt="">
-                <img src="https://live.staticflickr.com/65535/53857377357_6ec77eccab_z.jpg" alt="">
-                <img src="https://live.staticflickr.com/65535/53858641659_055e15434d_z.jpg" alt="">
-            </div>
-        </div>
+            <li class="nav-item dropdown">
+                <a href="" class="dropdown-toggle">Contact</a>
+                <ul class="dropdown-menu">
+                 
+                </ul>
+            </li>
+            <!-- Add more items as needed -->
+        </ul>
+    </nav>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', (e) => {
+            // Only prevent default action if href is empty
+            if (!toggle.getAttribute('href') || toggle.getAttribute('href') === '#') {
+                e.preventDefault();
+                const isOpen = menu.style.display === 'block';
+
+                // Close all dropdown menus
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    m.style.display = 'none';
+                });
+
+                // Toggle the clicked dropdown menu
+                menu.style.display = isOpen ? 'none' : 'block';
+            }
+        });
+    });
+
+    // Close all dropdown menus if clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu').forEach(m => {
+                m.style.display = 'none';
+            });
+        }
+    });
+});
+    </script>
+
+<div class="gallery-box">
+    <div class="image-gallery">
+        <img src="https://live.staticflickr.com/65535/53858518398_a144c7351f_z.jpg" alt="">
+        <img src="https://live.staticflickr.com/65535/53858272041_50befa62b2_z.jpg" alt="">
+        <img src="https://live.staticflickr.com/65535/53858690630_d75d4ca013_z.jpg" alt="">
+    </div>
+    <div class="image-gallery">
+        <img src="https://live.staticflickr.com/65535/53858272186_035c49d61b_z.jpg" alt="">
+        <img src="https://live.staticflickr.com/65535/53857377282_1c46f1c552_z.jpg" alt="">
+        <img src="https://live.staticflickr.com/65535/53858641284_4c553ede08_z.jpg" alt="">
+    </div>
+    <div class="image-gallery">
+        <img src="https://live.staticflickr.com/65535/53858690590_389cff8107_z.jpg" alt="">
+        <img src="https://live.staticflickr.com/65535/53857377357_6ec77eccab_z.jpg" alt="">
+        <img src="https://live.staticflickr.com/65535/53858641659_055e15434d_z.jpg" alt="">
+    </div>
 </div>
-     <script> 
-        function disableRightClick() 
-        {  
-        return false; 
-        } 
-    </script> 
+
+
 </body>
 </html>
