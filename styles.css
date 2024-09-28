@@ -1,9 +1,3 @@
-
-
-
-/**************************************************************/
-
-
 @media screen and (min-width:300px) and (max-width: 768px){
     
 
@@ -37,7 +31,7 @@
       }
       
     .sidenav {
-        width: 0px;
+        width: 0;
         height: 100vh;
         background-color: #ffffff;
         overflow-y: auto;
@@ -100,21 +94,9 @@
     }
     
     .gallery-box{
-        padding-top: 3%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        max-width: 100%;
+        padding: 10% 10%;
+        text-align: center; 
     }
-      .image-gallery img {
-        width: 100%;
-        object-fit: cover;
-        border: 1px solid #ccc;
-      }
-    
-      .image-gallery .h3{
-        text-align: center;
-    }
-    
     
     }
     
@@ -154,7 +136,7 @@
           }
           
         .sidenav {
-            width: 0px;
+            width: 0;
             height: 100vh;
             background-color: #ffffff;
             overflow-y: auto;
@@ -192,9 +174,9 @@
             display: none;
             position: relative;
             width: 100%;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             padding: 0;
+            
         }
         
         .dropdown-menu li {
@@ -217,133 +199,14 @@
         }
         
         .gallery-box{
-            padding-top: 3%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 100%;
-        }
-          .image-gallery img {
-            width: 100%;
-            object-fit: cover;
-            border: 1px solid #ccc;
-          }
-        
-          .image-gallery .h3{
-            text-align: center;
+            padding: 10% 10%;
+            text-align: center; 
         }
         
         
         }
         /***************************/
         @media screen and (min-width:1200px) and (max-width: 1920px){
-    
-        body {
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            font-style: normal; 
-        }
-        .header{
-            display: flex;
-            flex-direction: row;
-            
-        }
-        .opennav{
-            font-size: 1rem;
-        
-            visibility: hidden;
-           
-        }
-        .logo{
-            width: 100%;
-            font-size: 1rem;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-     
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 30px;
-            font-size: 36px;
-            color: black;
-            visibility: hidden;
-          }
-        
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            width: 100%;
-        }
-        
-        .nav-item {
-            position: relative;
-            width: 100%;
-        }
-        
-        .nav-item a {
-            display: block;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        
-        .nav-item a:hover {
-            background-color: #ececec;
-        }
-        .dropdown-toggle{
-            font-size: 1.3rem;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            width: 100%;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            padding: 0;
-        }
-        
-        .dropdown-menu li {
-            padding: 12px 16px;
-            list-style-type: none;
-          
-            
-        }
-        
-        .dropdown-menu li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            display: block;
-            font-size: 1rem;
-            
-        }
-        
-        .dropdown-menu li a:hover {
-            background-color: #575757;
-        }
-        
-        .gallery-box{
-            padding-top: 3%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 100%;
-        }
-          .image-gallery img {
-            width: 100%;
-            object-fit: cover;
-            border: 1px solid #ccc;
-          }
-        
-          .image-gallery .h3{
-            text-align: center;
-        }
-        
-        
-    }
-    
-    @media screen and (min-width:1920px){
     
         body {
             font-family: "Lato", sans-serif;
@@ -421,6 +284,106 @@
             list-style-type: none;
             background-color: #ffffff;
             opacity: 1;
+        }
+        
+        .dropdown-menu li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            display: block;
+            font-size: 1rem;
+            background-color: #ffffff;
+        }
+        
+        .dropdown-menu li a:hover {
+            background-color: #575757;
+        }
+        
+        .gallery-box{
+            padding: 10% 10%;
+            text-align: center; 
+        }
+        
+        
+    }
+    
+    @media screen and (min-width:1920px){
+    
+        body {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal; 
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .opennav{
+            font-size: 1rem;
+        
+            visibility: hidden;
+           
+        }
+        .logo{
+            width: 100%;
+            font-size: 1rem;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .sidenav{
+            width: 100%;
+        
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 30px;
+            font-size: 36px;
+            color: black;
+            visibility: hidden;
+          }
+        
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            width: 100%;
+        }
+        
+        .nav-item {
+            position: relative;
+            width: 100%;
+        }
+        
+        .nav-item a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .nav-item a:hover {
+            background-color: #ececec;
+        }
+        .dropdown-toggle{
+            font-size: 1.3rem;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            padding: 0;
+            
+        }
+        
+        .dropdown-menu li {
+            padding: 12px 16px;
+            list-style-type: none;
+            background-color: #ffffff;
+            opacity: 1;
             
         }
         
@@ -435,19 +398,8 @@
         
         
         .gallery-box{
-            padding-top: 3%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 100%;
-        }
-          .image-gallery img {
-            width: 100%;
-            object-fit: cover;
-            border: 1px solid #ccc;
-          }
-        
-          .image-gallery .h3{
-            text-align: center;
+            padding: 10% 10%;
+            text-align: center; 
         }
         
         
