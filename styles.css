@@ -93,9 +93,23 @@
         background-color: #575757;
     }
     
-    .gallery-box{
-        padding: 10% 10%;
-        text-align: center; 
+    .gallery-box {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Adjust min size as needed */
+        gap: 10px; /* Space between images */
+    }
+    
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures images cover their boxes */
+        border-radius: 5px; /* Optional: Add rounded corners */
     }
     
     }
@@ -198,11 +212,24 @@
             background-color: #575757;
         }
         
-        .gallery-box{
-            padding: 10% 10%;
-            text-align: center; 
+        .gallery-box {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
         
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust min size as needed */
+            gap: 10px; /* Space between images */
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ensures images cover their boxes */
+            border-radius: 5px; /* Optional: Add rounded corners */
+        }
         
         }
         /***************************/
@@ -298,9 +325,23 @@
             background-color: #575757;
         }
         
-        .gallery-box{
-            padding: 10% 10%;
-            text-align: center; 
+        .gallery-box {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust min size as needed */
+            gap: 10px; /* Space between images */
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ensures images cover their boxes */
+            border-radius: 5px; /* Optional: Add rounded corners */
         }
         
         
@@ -397,10 +438,23 @@
         }
         
         
-        .gallery-box{
-            padding: 10% 10%;
-            text-align: center; 
+        .gallery-box {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
         
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); /* Adjust min size as needed */
+            gap: 10px; /* Space between images */
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ensures images cover their boxes */
+            border-radius: 5px; /* Optional: Add rounded corners */
+        }
         
     }
