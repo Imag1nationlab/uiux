@@ -95,22 +95,28 @@
     
     .gallery-box {
         display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
         justify-content: center;
-        padding: 20px;
     }
     
     .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust min size as needed */
-        gap: 10px; /* Space between images */
+        flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+        max-width: 100%; /* Set a maximum width to avoid overly large images */
+        box-sizing: border-box;
     }
     
     .image-gallery img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Ensures images cover their boxes */
-        border-radius: 5px; /* Optional: Add rounded corners */
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Ensures aspect ratio is maintained */
+        border-radius: 8px; /* Optional: gives rounded corners */
+        display: block; /* Removes any extra space below images */
+        margin-bottom: 16px; /* Adds space between images */
     }
+    
+  
+    
     
     }
     
@@ -214,21 +220,24 @@
         
         .gallery-box {
             display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
             justify-content: center;
-            padding: 20px;
         }
         
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust min size as needed */
-            gap: 10px; /* Space between images */
+            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+            max-width: 100%; /* Set a maximum width to avoid overly large images */
+            box-sizing: border-box;
         }
         
         .image-gallery img {
-            width: 100%;
-            height: auto;
-            object-fit: cover; /* Ensures images cover their boxes */
-            border-radius: 5px; /* Optional: Add rounded corners */
+            width: 100%; /* Makes the image responsive */
+            height: auto; /* Ensures aspect ratio is maintained */
+            border-radius: 8px; /* Optional: gives rounded corners */
+            display: block; /* Removes any extra space below images */
+            margin-bottom: 16px; /* Adds space between images */
         }
         
         }
@@ -327,21 +336,24 @@
         
         .gallery-box {
             display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
             justify-content: center;
-            padding: 20px;
         }
         
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust min size as needed */
-            gap: 10px; /* Space between images */
+            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+            max-width: 100%; /* Set a maximum width to avoid overly large images */
+            box-sizing: border-box;
         }
         
         .image-gallery img {
-            width: 100%;
-            height: auto;
-            object-fit: cover; /* Ensures images cover their boxes */
-            border-radius: 5px; /* Optional: Add rounded corners */
+            width: 100%; /* Makes the image responsive */
+            height: auto; /* Ensures aspect ratio is maintained */
+            border-radius: 8px; /* Optional: gives rounded corners */
+            display: block; /* Removes any extra space below images */
+            margin-bottom: 16px; /* Adds space between images */
         }
         
         
@@ -440,22 +452,27 @@
         
         .gallery-box {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
             justify-content: center;
-            padding: 20px;
+            
         }
         
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust min size as needed */
-            gap: 10px; /* Space between images */
+            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+            max-width: 100%; /* Set a maximum width to avoid overly large images */
+            box-sizing: border-box;
+            height: auto;
+           
         }
         
         .image-gallery img {
-            width: 100%;
-            height: auto;
-            object-fit: cover; /* Ensures images cover their boxes */
-            border-radius: 5px; /* Optional: Add rounded corners */
+            width: 100%; /* Makes the image responsive */
+            height: auto; /* Ensures aspect ratio is maintained */
+            border-radius: 8px; /* Optional: gives rounded corners */
+            display: block; /* Removes any extra space below images */
+            margin-bottom: 16px; /* Adds space between images */
         }
         
     }
