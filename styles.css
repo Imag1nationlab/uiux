@@ -1,35 +1,45 @@
-@media screen and (min-width:300px) and (max-width: 768px){
-    
-
-    body {
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
+html{
+    font-family: "Lato", sans-serif;
+        font-weight: 100;
         font-style: normal; 
-    }
+}
+
+@media screen and (min-width:300px) and (max-width: 768px){
+ 
     .header{
         display: flex;
         flex-direction: row;
-        
     }
     .opennav{
-        font-size: 1rem;
-        margin: auto;
-       
+        font-size: 0.5rem;
+        width: 50%;
+        padding: 30px 60px;
     }
     .logo{
-        font-size: 0.7rem;
+        width: 60%;
+        height: auto;
+        padding: 30px 60px;
         margin: auto;
     }
+        
+    .logo img{
+        width: 60%;
+        height: auto;
+        float: right;
+        
+    }
+        
     .sidenav .closebtn {
         position: absolute;
         top: 0;
         right: 30px;
-        font-size: 36px;
+        font-size: 0.8rem;
         margin-left: 50px;
-        padding-top: 14px;
+        padding-top: 30px;
         color: black;
-      }
-      
+        margin: auto;
+    }
+              
     .sidenav {
         width: 0;
         height: 100vh;
@@ -38,60 +48,82 @@
         position: fixed;
         top: 0;
         left: 0;
-    
     }
-    
+
+    .sidenav::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
+    }
+            
     .nav-list {
         list-style: none;
         padding: 0;
-        padding-top: 60px;
+        padding-top: 30px;
     }
-    
+            
     .nav-item {
         position: relative;
     }
+            
+.nav-item a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative; /* To position the underline */
+    padding-bottom: 6px; /* Space for underline */
+}
     
-    .nav-item a {
-        display: block;
-        color: rgb(0, 0, 0);
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-    }
     
-    .nav-item a:hover {
-        background-color: #ececec;
-    }
-    .dropdown-toggle{
-        font-size: 1.3rem;
-    }
-    .dropdown-menu {
-        display: none;
-        position: relative;
-        width: 100%;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        padding: 0;
-    }
+/* Underline effect using ::after pseudo-element */
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially no underline */
+    height: 0.1px; /* Thickness of the underline */
+    background-color: #111111;
+    transition: width 0.3s ease; /* Smooth animation */
+}
     
-    .dropdown-menu li {
-        padding: 12px 16px;
-        list-style-type: none;
-      
-        
-    }
-    
+/* Expand underline on hover */
+.dropdown-menu a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+            
+.dropdown-toggle{
+    font-size: 1.3rem;
+}
+.dropdown-menu {
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    padding: 0;
+}
+            
+.dropdown-menu li {
+    padding: 0px 16px;
+    list-style-type: none;
+}
+            
     .dropdown-menu li a {
         color: rgb(0, 0, 0);
         text-decoration: none;
         display: block;
         font-size: 1rem;
-        
+    }
+            
+    
+    
+    .nav-item .dropdown-toggle {
+        font-size: 0.5rem; /* Adjust as needed */
     }
     
-    .dropdown-menu li a:hover {
-        background-color: #575757;
-    }
+    .nav-item .dropdown-menu li a {
+        font-size: 0.4rem; /* Adjust as needed */
+    }  
     
     .gallery-box {
         display: flex;
@@ -99,10 +131,11 @@
         gap: 16px;
         padding: 16px;
         justify-content: center;
+        
     }
     
     .image-gallery {
-        flex: 1 1 calc(50% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+        flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
         max-width: 100%; /* Set a maximum width to avoid overly large images */
         box-sizing: border-box;
     }
@@ -116,7 +149,62 @@
     }
     
   
+    .footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 13px;
     
+}
+.network-box {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+  
+  .network-box-items {
+    width: 100%;
+    padding-top: 3px;
+  }
+  
+  .network-box-items img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    
+  }
+  
+  .network-box-items a {
+    width: 4%; /* Adjust width as needed */
+    position: relative;
+    display: inline-block;
+    text-align: center; /* Centers content inside */
+    padding: 0 5px; /* Optional: Add padding for better spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  .network-box-items a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust the underline's position */
+    width: 0;
+    height: 0.1px; /* Adjust thickness */
+    background-color: black; /* Adjust color */
+    transition: width 0.3s ease; /* Smooth animation */
+  }
+  
+  .network-box-items a:hover::after {
+    width: 100%; /* Extend the underline on hover */
+  }
+.copyright{
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    font-size: 0.3rem;
+}
+
     
     }
     
@@ -124,110 +212,128 @@
     
     
     @media screen and (min-width:768px) and (max-width: 1200px){
-        
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.opennav{
+    font-size: 0.7rem;
+    width: 50%;
+    padding: 30px 60px;
+}
+.logo{
+    width: 50%;
+    height: auto;
+    padding: 30px 60px;
+}
     
-        body {
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            font-style: normal; 
-        }
-        .header{
-            display: flex;
-            flex-direction: row;
-            
-        }
-        .opennav{
-            font-size: 1rem;
-            margin: auto;
-           
-        }
-        .logo{
-            font-size: 0.7rem;
-            margin: auto;
-        }
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 30px;
-            font-size: 36px;
-            margin-left: 50px;
-            padding-top: 14px;
-            color: black;
-          }
+.logo img{
+    width: 60%;
+    height: auto;
+    float: right;
+}
+    
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 1rem;
+    margin-left: 50px;
+    padding-top: 30px;
+    color: black;
+}
           
-        .sidenav {
-            width: 0;
-            height: 100vh;
-            background-color: #ffffff;
-            overflow-y: auto;
-            position: fixed;
-            top: 0;
-            left: 0;
+.sidenav {
+    width: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.sidenav::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
+    }
+.nav-list {
+    list-style: none;
+    padding: 0;
+    padding-top: 30px;
+}
         
-        }
+.nav-item {
+    position: relative;
+}
         
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            padding-top: 60px;
-        }
+    .nav-item a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative; /* To position the underline */
+    padding-bottom: 6px; /* Space for underline */
+    }
+
+
+/* Underline effect using ::after pseudo-element */
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially no underline */
+    height: 0.1px; /* Thickness of the underline */
+    background-color: #111111;
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* Expand underline on hover */
+.dropdown-menu a:hover::after {
+    width: 100%; /* Full width on hover */
+}
         
-        .nav-item {
-            position: relative;
-        }
+.dropdown-toggle{
+    font-size: 1.3rem;
+}
+.dropdown-menu {
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    padding: 0;
+}
         
-        .nav-item a {
-            display: block;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+.dropdown-menu li {
+    padding: 0px 16px;
+    list-style-type: none;
+}
         
-        .nav-item a:hover {
-            background-color: #ececec;
-        }
-        .dropdown-toggle{
-            font-size: 1.3rem;
-        }
-        .dropdown-menu {
-            display: none;
-            position: relative;
-            width: 100%;
-            z-index: 1;
-            padding: 0;
-            
-        }
+.dropdown-menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+}
         
-        .dropdown-menu li {
-            padding: 12px 16px;
-            list-style-type: none;
-          
-            
-        }
-        
-        .dropdown-menu li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            display: block;
-            font-size: 1rem;
-            
-        }
-        
-        .dropdown-menu li a:hover {
-            background-color: #575757;
-        }
-        
+.nav-item .dropdown-toggle {
+    font-size: 0.7rem; /* Adjust as needed */
+}
+
+.nav-item .dropdown-menu li a {
+    font-size: 0.6rem; /* Adjust as needed */
+}  
+
         .gallery-box {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
             padding: 16px;
             justify-content: center;
+         
         }
         
         .image-gallery {
-            flex: 1 1 calc(25% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
             max-width: 100%; /* Set a maximum width to avoid overly large images */
             box-sizing: border-box;
         }
@@ -239,111 +345,169 @@
             display: block; /* Removes any extra space below images */
             margin-bottom: 16px; /* Adds space between images */
         }
-        
+
+        .footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 13px;
+    border-top: 0.1px solid #111111;
+}
+.network-box {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+  
+  .network-box-items {
+    width: 100%;
+    padding-top: 3px;
+  }
+  
+  .network-box-items img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    
+  }
+  
+  .network-box-items a {
+    width: 3.3%; /* Adjust width as needed */
+    position: relative;
+    display: inline-block;
+    text-align: center; /* Centers content inside */
+    padding: 0 5px; /* Optional: Add padding for better spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  .network-box-items a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust the underline's position */
+    width: 0;
+    height: 0.1px; /* Adjust thickness */
+    background-color: black; /* Adjust color */
+    transition: width 0.3s ease; /* Smooth animation */
+  }
+  
+  .network-box-items a:hover::after {
+    width: 100%; /* Extend the underline on hover */
+  }
+.copyright{
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    font-size: 0.4rem;
+}
+
         }
         /***************************/
-        @media screen and (min-width:1200px) and (max-width: 1920px){
+@media screen and (min-width:1200px) and (max-width: 1920px){
+ .header{
+        width: 100%;
+        padding-top: 30px;
+      
+    }
+    .opennav{
+        font-size: 0rem;
+        visibility: hidden;
+    }
+    .logo{
+        width: 100%;
+        height: auto; 
+        text-align: center;
+    }
     
-        body {
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            font-style: normal; 
-        }
-        .header{
-            display: flex;
-            flex-direction: row;
+    .logo img{
+        width: 19%;
+        height: auto;
+      
+    }
+    
+    .sidenav{
+        width: 100%;
+        height: auto;
+    }
             
-        }
-        .opennav{
-            font-size: 1rem;
-        
-            visibility: hidden;
-           
-        }
-        .logo{
-            width: 100%;
-            font-size: 1rem;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-        .sidenav{
-            width: 100%;
-        
-        }
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 30px;
-            font-size: 36px;
-            color: black;
-            visibility: hidden;
-          }
-        
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            width: 100%;
-        }
-        
-        .nav-item {
-            position: relative;
-            width: 100%;
-        }
-        
-        .nav-item a {
-            display: block;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        
-        .nav-item a:hover {
-            background-color: #ececec;
-        }
-        .dropdown-toggle{
-            font-size: 1.3rem;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            width: 100%;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            padding: 0;
-        }
-        
-        .dropdown-menu li {
-            padding: 12px 16px;
-            list-style-type: none;
-            background-color: #ffffff;
-            opacity: 1;
-        }
-        
-        .dropdown-menu li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            display: block;
-            font-size: 1rem;
-            background-color: #ffffff;
-        }
-        
-        .dropdown-menu li a:hover {
-            background-color: #575757;
-        }
-        
+    .sidenav .closebtn {
+        font-size: 0rem;
+        visibility: hidden;
+    }
+            
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        width: 100%;
+       
+    }
+            
+    .nav-item {
+        position: relative;
+        width: 100%;
+    
+    }
+            
+    .nav-item a {
+        display: block;
+        color: #111111;
+        text-align: center;
+        text-decoration: none;
+        position: relative; /* To position the underline */
+        padding-bottom: 6px; /* Space for underline */
+    }
+            
+    /* Underline effect using ::after pseudo-element */
+    .dropdown-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0; /* Initially no underline */
+        height: 1px; /* Thickness of the underline */
+        background-color: #111111;
+        transition: width 0.3s ease; /* Smooth animation */
+    }
+    
+    /* Expand underline on hover */
+    .dropdown-menu a:hover::after {
+        width: 100%; /* Full width on hover */
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        padding: 0;
+    }
+            
+    .dropdown-menu li {
+        padding: 16px 16px;
+        list-style-type: none;
+        background-color: #ffffff;
+        opacity: 1;
+    }
+    .nav-item .dropdown-toggle {
+        font-size: 0.9rem; /* Adjust as needed */
+    }
+    
+    .nav-item .dropdown-menu li a {
+        font-size: 0.8rem; /* Adjust as needed */
+    }         
         .gallery-box {
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
             padding: 16px;
             justify-content: center;
+        
         }
         
         .image-gallery {
-            flex: 1 1 calc(25% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
             max-width: 100%; /* Set a maximum width to avoid overly large images */
             box-sizing: border-box;
         }
@@ -356,99 +520,156 @@
             margin-bottom: 16px; /* Adds space between images */
         }
         
+   .footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 13px;
+        border-top: 0.1px solid #111111;
+    }
+    .network-box {
+        width: 100%;
+        font-size: 0.8rem;
+      }
+      
+      .network-box-items {
+        width: 100%;
+        padding-top: 3px;
+      }
+      
+      .network-box-items img {
+        width: 100%; /* Makes the image fill the container */
+        height: auto; /* Maintains aspect ratio */
+        display: block;
         
+      }
+      
+      .network-box-items a {
+        width: 3%; /* Adjust width as needed */
+        position: relative;
+        display: inline-block;
+        text-align: center; /* Centers content inside */
+        padding: 0 5px; /* Optional: Add padding for better spacing */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+      }
+      
+      .network-box-items a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px; /* Adjust the underline's position */
+        width: 0;
+        height: 0.1px; /* Adjust thickness */
+        background-color: black; /* Adjust color */
+        transition: width 0.3s ease; /* Smooth animation */
+      }
+      
+      .network-box-items a:hover::after {
+        width: 100%; /* Extend the underline on hover */
+      }
+    .copyright{
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 6px;
+        font-size: 0.5rem;
+    }        
     }
     
     @media screen and (min-width:1920px){
-    
-        body {
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            font-style: normal; 
-        }
-        .header{
-            display: flex;
-            flex-direction: row;
-            
-        }
-        .opennav{
-            font-size: 1rem;
+.header{
+    width: 100%;
+    padding-top: 30px;
+
+}
+.opennav{
+    font-size: 0rem;
+    visibility: hidden;
+}
+.logo{
+    width: 100%;
+    height: auto; 
+    text-align: center;
+}
+
+.logo img{
+    width: 19%;
+    height: auto;
+  
+}
+
+.sidenav{
+    width: 100%;
+    height: auto;
+}
         
-            visibility: hidden;
-           
-        }
-        .logo{
-            width: 100%;
-            font-size: 1rem;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-        .sidenav{
-            width: 100%;
+.sidenav .closebtn {
+    font-size: 0rem;
+    visibility: hidden;
+}
         
-        }
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 30px;
-            font-size: 36px;
-            color: black;
-            visibility: hidden;
-          }
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+   
+}
         
-        .nav-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            width: 100%;
-        }
+.nav-item {
+    position: relative;
+    width: 100%;
+
+}
         
-        .nav-item {
-            position: relative;
-            width: 100%;
-        }
+.nav-item a {
+    display: block;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
+    position: relative; /* To position the underline */
+    padding-bottom: 6px; /* Space for underline */
+}
         
-        .nav-item a {
-            display: block;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+/* Underline effect using ::after pseudo-element */
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially no underline */
+    height: 1px; /* Thickness of the underline */
+    background-color: #111111;
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* Expand underline on hover */
+.dropdown-menu a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    padding: 0;
+}
         
-        .nav-item a:hover {
-            background-color: #ececec;
-        }
-        .dropdown-toggle{
-            font-size: 1.3rem;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            width: 100%;
-            z-index: 1;
-            padding: 0;
-            
-        }
-        
-        .dropdown-menu li {
-            padding: 12px 16px;
-            list-style-type: none;
-            background-color: #ffffff;
-            opacity: 1;
-            
-        }
-        
-        .dropdown-menu li a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            display: block;
-            font-size: 1rem;
-        
-            
-        }
-        
+.dropdown-menu li {
+    padding: 16px 16px;
+    list-style-type: none;
+    background-color: #ffffff;
+    opacity: 1;
+}
+.nav-item .dropdown-toggle {
+    font-size: 1rem; /* Adjust as needed */
+}
+
+.nav-item .dropdown-menu li a {
+    font-size: 0.9rem; /* Adjust as needed */
+}     
         
         .gallery-box {
             display: flex;
@@ -460,7 +681,7 @@
         }
         
         .image-gallery {
-            flex: 1 1 calc(25% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
             max-width: 100%; /* Set a maximum width to avoid overly large images */
             box-sizing: border-box;
             height: auto;
@@ -474,5 +695,60 @@
             display: block; /* Removes any extra space below images */
             margin-bottom: 16px; /* Adds space between images */
         }
-        
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 13px;
+    border-top: 0.1px solid #111111;
+}
+.network-box {
+    width: 100%;
+    font-size: 0.8rem;
+    
+  }
+  
+  .network-box-items {
+    width: 100%;
+    padding-top: 3px;
+  }
+  
+  .network-box-items img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    
+  }
+  
+  .network-box-items a {
+    width: 3%; /* Adjust width as needed */
+    position: relative;
+    display: inline-block;
+    text-align: center; /* Centers content inside */
+    padding: 0 5px; /* Optional: Add padding for better spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  .network-box-items a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust the underline's position */
+    width: 0;
+    height: 0.1px; /* Adjust thickness */
+    background-color: black; /* Adjust color */
+    transition: width 0.3s ease; /* Smooth animation */
+  }
+  
+  .network-box-items a:hover::after {
+    width: 100%; /* Extend the underline on hover */
+  }
+.copyright{
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    font-size: 0.8rem;
+}
     }
