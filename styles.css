@@ -1,24 +1,28 @@
-html{
+html body{
     font-family: "Lato", sans-serif;
         font-weight: 100;
         font-style: normal; 
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
 }
 
-@media screen and (min-width:300px) and (max-width: 768px){
- 
+
+@media screen and (min-width:240px) and (max-width: 720px){
+    
     .header{
         display: flex;
         flex-direction: row;
     }
     .opennav{
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         width: 50%;
-        padding: 30px 60px;
+        padding: 30px 30px;
     }
     .logo{
-        width: 60%;
+        width: 100%;
         height: auto;
-        padding: 30px 60px;
+        padding: 30px 30px;
         margin: auto;
     }
         
@@ -33,7 +37,7 @@ html{
         position: absolute;
         top: 0;
         right: 30px;
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         margin-left: 50px;
         padding-top: 30px;
         color: black;
@@ -118,296 +122,113 @@ html{
     
     
     .nav-item .dropdown-toggle {
-        font-size: 0.5rem; /* Adjust as needed */
+        font-size: 0.4rem; /* Adjust as needed */
     }
     
     .nav-item .dropdown-menu li a {
-        font-size: 0.4rem; /* Adjust as needed */
+        font-size: 0.3rem; /* Adjust as needed */
     }  
-    
-    .gallery-box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 16px;
-        justify-content: center;
-        
-    }
-    
-    .image-gallery {
-        flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
-        max-width: 100%; /* Set a maximum width to avoid overly large images */
-        box-sizing: border-box;
-    }
-    
-    .image-gallery img {
-        width: 100%; /* Makes the image responsive */
-        height: auto; /* Ensures aspect ratio is maintained */
-        border-radius: 8px; /* Optional: gives rounded corners */
-        display: block; /* Removes any extra space below images */
-        margin-bottom: 16px; /* Adds space between images */
-    }
-    
-  
-    .footer{
-    width: 100%;
-    height: auto;
+
+
+
+.gallery-box {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 13px;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
     
-}
-.network-box {
-    width: 100%;
-    font-size: 0.5rem;
-  }
-  
-  .network-box-items {
-    width: 100%;
-    padding-top: 3px;
-  }
-  
-  .network-box-items img {
-    width: 100%; /* Makes the image fill the container */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-    
-  }
-  
-  .network-box-items a {
-    width: 4%; /* Adjust width as needed */
-    position: relative;
-    display: inline-block;
-    text-align: center; /* Centers content inside */
-    padding: 0 5px; /* Optional: Add padding for better spacing */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-  }
-  
-  .network-box-items a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust the underline's position */
-    width: 0;
-    height: 0.1px; /* Adjust thickness */
-    background-color: black; /* Adjust color */
-    transition: width 0.3s ease; /* Smooth animation */
-  }
-  
-  .network-box-items a:hover::after {
-    width: 100%; /* Extend the underline on hover */
-  }
-.copyright{
-    width: 100%;
-    padding-top: 16px;
-    padding-bottom: 6px;
-    font-size: 0.3rem;
 }
 
-    
-    }
-    
-    /*****************************************/
-    
-    
-    @media screen and (min-width:768px) and (max-width: 1200px){
-.header{
+.image-gallery {
+    flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+    max-width: 100%; /* Set a maximum width to avoid overly large images */
+    box-sizing: border-box;
+    height: auto;
+   
+}
+
+.image-gallery img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Ensures aspect ratio is maintained */
+    border-radius: 8px; /* Optional: gives rounded corners */
+    display: block; /* Removes any extra space below images */
+    margin-bottom: 16px; /* Adds space between images */
+}
+.footer{
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    border-top: 0.1px solid #111111;
+    align-items: center;
+ 
 }
-.opennav{
-    font-size: 0.7rem;
-    width: 50%;
-    padding: 30px 60px;
-}
-.logo{
-    width: 50%;
+
+.network-box{
+    width: 100%;
     height: auto;
-    padding: 30px 60px;
 }
-    
-.logo img{
-    width: 60%;
+
+.network-box-items{
+    width: 15%;
     height: auto;
-    float: right;
-}
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    gap: 6px;
     
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-size: 1rem;
-    margin-left: 50px;
-    padding-top: 30px;
-    color: black;
 }
-          
-.sidenav {
-    width: 0;
-    height: 100vh;
-    background-color: #ffffff;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-.sidenav::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Edge */
-    }
-.nav-list {
-    list-style: none;
-    padding: 0;
-    padding-top: 30px;
-}
-        
-.nav-item {
+
+.network-box-items a {
     position: relative;
-}
-        
-    .nav-item a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
-    position: relative; /* To position the underline */
-    padding-bottom: 6px; /* Space for underline */
-    }
+}
 
-
-/* Underline effect using ::after pseudo-element */
-.dropdown-menu a::after {
+.network-box-items a::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0; /* Initially no underline */
-    height: 0.1px; /* Thickness of the underline */
-    background-color: #111111;
-    transition: width 0.3s ease; /* Smooth animation */
+    width: 0;
+    height: 0.1px;
+    background: #111111; /* Change to the color of your underline */
+    transition: width 0.3s ease-in-out;
 }
 
-/* Expand underline on hover */
-.dropdown-menu a:hover::after {
-    width: 100%; /* Full width on hover */
-}
-        
-.dropdown-toggle{
-    font-size: 1.3rem;
-}
-.dropdown-menu {
-    display: none;
-    position: relative;
+.network-box-items a:hover::after {
     width: 100%;
-    z-index: 1;
-    padding: 0;
 }
-        
-.dropdown-menu li {
-    padding: 0px 16px;
-    list-style-type: none;
-}
-        
-.dropdown-menu li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    display: block;
-}
-        
-.nav-item .dropdown-toggle {
-    font-size: 0.7rem; /* Adjust as needed */
-}
-
-.nav-item .dropdown-menu li a {
-    font-size: 0.6rem; /* Adjust as needed */
-}  
-
-        .gallery-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            padding: 16px;
-            justify-content: center;
-         
-        }
-        
-        .image-gallery {
-            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
-            max-width: 100%; /* Set a maximum width to avoid overly large images */
-            box-sizing: border-box;
-        }
-        
-        .image-gallery img {
-            width: 100%; /* Makes the image responsive */
-            height: auto; /* Ensures aspect ratio is maintained */
-            border-radius: 8px; /* Optional: gives rounded corners */
-            display: block; /* Removes any extra space below images */
-            margin-bottom: 16px; /* Adds space between images */
-        }
-
-        .footer{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 13px;
-    border-top: 0.1px solid #111111;
-}
-.network-box {
-    width: 100%;
-    font-size: 0.5rem;
-  }
-  
-  .network-box-items {
-    width: 100%;
-    padding-top: 3px;
-  }
-  
   .network-box-items img {
     width: 100%; /* Makes the image fill the container */
     height: auto; /* Maintains aspect ratio */
     display: block;
-    
   }
   
-  .network-box-items a {
-    width: 3.3%; /* Adjust width as needed */
-    position: relative;
-    display: inline-block;
-    text-align: center; /* Centers content inside */
-    padding: 0 5px; /* Optional: Add padding for better spacing */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-  }
-  
-  .network-box-items a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust the underline's position */
-    width: 0;
-    height: 0.1px; /* Adjust thickness */
-    background-color: black; /* Adjust color */
-    transition: width 0.3s ease; /* Smooth animation */
-  }
-  
-  .network-box-items a:hover::after {
-    width: 100%; /* Extend the underline on hover */
-  }
 .copyright{
     width: 100%;
-    padding-top: 16px;
-    padding-bottom: 6px;
-    font-size: 0.4rem;
+
 }
 
-        }
-        /***************************/
-@media screen and (min-width:1200px) and (max-width: 1920px){
- .header{
+.copyright h6{
+    font-size: 0.3rem;
+    text-align: center;
+
+}
+
+}
+
+
+/*****************************************/
+    
+    
+    
+@media screen and (min-width:720px) and (max-width: 1080px){
+
+
+    .header{
         width: 100%;
-        padding-top: 30px;
+        margin-top: 16px;
       
     }
     .opennav{
@@ -418,10 +239,11 @@ html{
         width: 100%;
         height: auto; 
         text-align: center;
+       
     }
     
     .logo img{
-        width: 19%;
+        width: 16%;
         height: auto;
       
     }
@@ -429,6 +251,7 @@ html{
     .sidenav{
         width: 100%;
         height: auto;
+      
     }
             
     .sidenav .closebtn {
@@ -441,6 +264,8 @@ html{
         padding: 0;
         display: flex;
         width: 100%;
+        margin: 0;  /* Ensure no margin at the top */
+        padding: 0; /* Already present in your code */
        
     }
             
@@ -466,7 +291,7 @@ html{
         bottom: 0;
         left: 0;
         width: 0; /* Initially no underline */
-        height: 1px; /* Thickness of the underline */
+        height: 0.1px; /* Thickness of the underline */
         background-color: #111111;
         transition: width 0.3s ease; /* Smooth animation */
     }
@@ -485,270 +310,295 @@ html{
     }
             
     .dropdown-menu li {
-        padding: 16px 16px;
+        padding: 6px 0px;
         list-style-type: none;
         background-color: #ffffff;
         opacity: 1;
     }
     .nav-item .dropdown-toggle {
-        font-size: 0.9rem; /* Adjust as needed */
+        font-size: 0.5rem; /* Adjust as needed */
     }
     
     .nav-item .dropdown-menu li a {
-        font-size: 0.8rem; /* Adjust as needed */
-    }         
-        .gallery-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            padding: 16px;
-            justify-content: center;
+        font-size: 0.4rem; /* Adjust as needed */
+    }   
+    .gallery-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
+        justify-content: center;
         
-        }
-        
-        .image-gallery {
-            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
-            max-width: 100%; /* Set a maximum width to avoid overly large images */
-            box-sizing: border-box;
-        }
-        
-        .image-gallery img {
-            width: 100%; /* Makes the image responsive */
-            height: auto; /* Ensures aspect ratio is maintained */
-            border-radius: 8px; /* Optional: gives rounded corners */
-            display: block; /* Removes any extra space below images */
-            margin-bottom: 16px; /* Adds space between images */
-        }
-        
-   .footer{
+    }
+    
+    .image-gallery {
+        flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+        max-width: 100%; /* Set a maximum width to avoid overly large images */
+        box-sizing: border-box;
+        height: auto;
+       
+    }
+    
+    .image-gallery img {
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Ensures aspect ratio is maintained */
+        border-radius: 8px; /* Optional: gives rounded corners */
+        display: block; /* Removes any extra space below images */
+        margin-bottom: 16px; /* Adds space between images */
+    }
+    .footer{
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 13px;
+        flex-direction: row;
         border-top: 0.1px solid #111111;
+        align-items: center;
+     
     }
-    .network-box {
+    
+    .network-box{
         width: 100%;
-        font-size: 0.8rem;
-      }
-      
-      .network-box-items {
+        height: auto;
+    }
+    
+    .network-box-items{
+        width: 10%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 6px;
+        
+    }
+    
+    .network-box-items a {
+        position: relative;
+        text-decoration: none;
+    }
+    
+    .network-box-items a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.1px;
+        background: #111111; /* Change to the color of your underline */
+        transition: width 0.3s ease-in-out;
+    }
+    
+    .network-box-items a:hover::after {
         width: 100%;
-        padding-top: 3px;
-      }
-      
+    }
       .network-box-items img {
         width: 100%; /* Makes the image fill the container */
         height: auto; /* Maintains aspect ratio */
         display: block;
-        
       }
       
-      .network-box-items a {
-        width: 3%; /* Adjust width as needed */
-        position: relative;
-        display: inline-block;
-        text-align: center; /* Centers content inside */
-        padding: 0 5px; /* Optional: Add padding for better spacing */
-        box-sizing: border-box; /* Ensures padding doesn't affect width */
-      }
-      
-      .network-box-items a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1px; /* Adjust the underline's position */
-        width: 0;
-        height: 0.1px; /* Adjust thickness */
-        background-color: black; /* Adjust color */
-        transition: width 0.3s ease; /* Smooth animation */
-      }
-      
-      .network-box-items a:hover::after {
-        width: 100%; /* Extend the underline on hover */
-      }
     .copyright{
         width: 100%;
-        padding-top: 16px;
-        padding-bottom: 6px;
-        font-size: 0.5rem;
-    }        
+    
     }
     
-    @media screen and (min-width:1920px){
-.header{
-    width: 100%;
-    padding-top: 30px;
-
-}
-.opennav{
-    font-size: 0rem;
-    visibility: hidden;
-}
-.logo{
-    width: 100%;
-    height: auto; 
-    text-align: center;
+    .copyright h6{
+        font-size: 0.4rem;
+        text-align: center;
+    
+    }
+    
 }
 
-.logo img{
-    width: 19%;
-    height: auto;
-  
-}
+/*****************************************/
+    
+    
+    
+@media screen and (min-width:1080px) and (max-width: 4320px){
 
-.sidenav{
-    width: 100%;
-    height: auto;
-}
-        
-.sidenav .closebtn {
-    font-size: 0rem;
-    visibility: hidden;
-}
-        
-.nav-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    width: 100%;
-   
-}
-        
-.nav-item {
-    position: relative;
-    width: 100%;
 
-}
-        
-.nav-item a {
-    display: block;
-    color: #111111;
-    text-align: center;
-    text-decoration: none;
-    position: relative; /* To position the underline */
-    padding-bottom: 6px; /* Space for underline */
-}
-        
-/* Underline effect using ::after pseudo-element */
-.dropdown-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0; /* Initially no underline */
-    height: 1px; /* Thickness of the underline */
-    background-color: #111111;
-    transition: width 0.3s ease; /* Smooth animation */
-}
-
-/* Expand underline on hover */
-.dropdown-menu a:hover::after {
-    width: 100%; /* Full width on hover */
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    padding: 0;
-}
-        
-.dropdown-menu li {
-    padding: 16px 16px;
-    list-style-type: none;
-    background-color: #ffffff;
-    opacity: 1;
-}
-.nav-item .dropdown-toggle {
-    font-size: 1rem; /* Adjust as needed */
-}
-
-.nav-item .dropdown-menu li a {
-    font-size: 0.9rem; /* Adjust as needed */
-}     
-        
-        .gallery-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            padding: 16px;
-            justify-content: center;
+    .header{
+        width: 100%;
+        margin-top: 16px;
+      
+    }
+    .opennav{
+        font-size: 0rem;
+        visibility: hidden;
+    }
+    .logo{
+        width: 100%;
+        height: auto; 
+        text-align: center;
+       
+    }
+    
+    .logo img{
+        width: 16%;
+        height: auto;
+      
+    }
+    
+    .sidenav{
+        width: 100%;
+        height: auto;
+      
+    }
             
-        }
-        
-        .image-gallery {
-            flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
-            max-width: 100%; /* Set a maximum width to avoid overly large images */
-            box-sizing: border-box;
-            height: auto;
-           
-        }
-        
-        .image-gallery img {
-            width: 100%; /* Makes the image responsive */
-            height: auto; /* Ensures aspect ratio is maintained */
-            border-radius: 8px; /* Optional: gives rounded corners */
-            display: block; /* Removes any extra space below images */
-            margin-bottom: 16px; /* Adds space between images */
-        }
-.footer{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 13px;
-    border-top: 0.1px solid #111111;
-}
-.network-box {
-    width: 100%;
-    font-size: 0.8rem;
-    
-  }
-  
-  .network-box-items {
-    width: 100%;
-    padding-top: 3px;
-  }
-  
-  .network-box-items img {
-    width: 100%; /* Makes the image fill the container */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-    
-  }
-  
-  .network-box-items a {
-    width: 3%; /* Adjust width as needed */
-    position: relative;
-    display: inline-block;
-    text-align: center; /* Centers content inside */
-    padding: 0 5px; /* Optional: Add padding for better spacing */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-  }
-  
-  .network-box-items a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* Adjust the underline's position */
-    width: 0;
-    height: 0.1px; /* Adjust thickness */
-    background-color: black; /* Adjust color */
-    transition: width 0.3s ease; /* Smooth animation */
-  }
-  
-  .network-box-items a:hover::after {
-    width: 100%; /* Extend the underline on hover */
-  }
-.copyright{
-    width: 100%;
-    padding-top: 16px;
-    padding-bottom: 6px;
-    font-size: 0.8rem;
-}
+    .sidenav .closebtn {
+        font-size: 0rem;
+        visibility: hidden;
     }
+            
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        margin: 0;  /* Ensure no margin at the top */
+        padding: 0; /* Already present in your code */
+       
+    }
+            
+    .nav-item {
+        position: relative;
+        width: 100%;
+    
+    }
+            
+    .nav-item a {
+        display: block;
+        color: #111111;
+        text-align: center;
+        text-decoration: none;
+        position: relative; /* To position the underline */
+        padding-bottom: 6px; /* Space for underline */
+    }
+            
+    /* Underline effect using ::after pseudo-element */
+    .dropdown-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0; /* Initially no underline */
+        height: 0.1px; /* Thickness of the underline */
+        background-color: #111111;
+        transition: width 0.3s ease; /* Smooth animation */
+    }
+    
+    /* Expand underline on hover */
+    .dropdown-menu a:hover::after {
+        width: 100%; /* Full width on hover */
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        padding: 0;
+    }
+            
+    .dropdown-menu li {
+        padding: 6px 0px;
+        list-style-type: none;
+        background-color: #ffffff;
+        opacity: 1;
+    }
+    .nav-item .dropdown-toggle {
+        font-size: 0.8rem; /* Adjust as needed */
+    }
+    
+    .nav-item .dropdown-menu li a {
+        font-size: 0.7rem; /* Adjust as needed */
+    }   
+    .gallery-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
+        justify-content: center;
+        
+    }
+    
+    .image-gallery {
+        flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
+        max-width: 100%; /* Set a maximum width to avoid overly large images */
+        box-sizing: border-box;
+        height: auto;
+       
+    }
+    
+    .image-gallery img {
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Ensures aspect ratio is maintained */
+        border-radius: 8px; /* Optional: gives rounded corners */
+        display: block; /* Removes any extra space below images */
+        margin-bottom: 16px; /* Adds space between images */
+    }
+    .footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        border-top: 0.1px solid #111111;
+        align-items: center;
+        padding: 30px 0;
+     
+    }
+    
+    .network-box{
+        width: 100%;
+        height: auto;
+    }
+    
+    .network-box-items{
+        width: 10%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 6px;
+        
+    }
+    
+    .network-box-items a {
+        position: relative;
+        text-decoration: none;
+    }
+    
+    .network-box-items a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.1px;
+        background: #111111; /* Change to the color of your underline */
+        transition: width 0.3s ease-in-out;
+    }
+    
+    .network-box-items a:hover::after {
+        width: 100%;
+    }
+      .network-box-items img {
+        width: 100%; /* Makes the image fill the container */
+        height: auto; /* Maintains aspect ratio */
+        display: block;
+      }
+      
+    .copyright{
+        width: 100%;
+    
+    }
+    
+    .copyright h6{
+        font-size: 0.rem;
+        text-align: center;
+    
+    }
+    
+}
+
+
+
