@@ -6,38 +6,51 @@ html body{
         margin: 0;
         box-sizing: border-box;
 }
-
+@media screen and (max-width:240px) {
+    body{
+        visibility: hidden;
+    }
+}
+    
 
 @media screen and (min-width:240px) and (max-width: 720px){
     
     .header{
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: row;
+        padding-top: 0.6em;
+        
     }
     .opennav{
-        font-size: 0.4rem;
-        width: 50%;
-        padding: 30px 30px;
+        display: flex;
+        font-size: 0.3em;
+        width: 100%;
+        justify-content: center;
+       
+        
     }
     .logo{
         width: 100%;
         height: auto;
-        padding: 30px 30px;
-        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
         
     .logo img{
-        width: 60%;
+        width: 4em;
         height: auto;
-        float: right;
-        
+       
     }
         
     .sidenav .closebtn {
         position: absolute;
         top: 0;
         right: 30px;
-        font-size: 0.5rem;
+        font-size: 0.6em;
         margin-left: 50px;
         padding-top: 30px;
         color: black;
@@ -123,7 +136,7 @@ html body{
     
     
     .nav-item .dropdown-toggle {
-        font-size: 0.4rem; /* Adjust as needed */
+        font-size: 0.4em; /* Adjust as needed */
     }
     
     .nav-item .dropdown-menu li a {
@@ -160,19 +173,19 @@ html body{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-top: 0.1px solid #111111;
-    align-items: center;
  
 }
 
 .network-box{
     width: 100%;
-    height: auto;
+    padding-top: 0.3em;
+
 }
 
 .network-box-items{
-    width: 15%;
+    width: 1.1em;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -195,6 +208,7 @@ html body{
     height: 0.1px;
     background: #111111; /* Change to the color of your underline */
     transition: width 0.3s ease-in-out;
+    
 }
 
 .network-box-items a:hover::after {
@@ -209,10 +223,11 @@ html body{
 .copyright{
     width: 100%;
 
+
 }
 
 .copyright h6{
-    font-size: 0.3rem;
+    font-size: 0.1em;
     text-align: center;
 
 }
@@ -224,12 +239,16 @@ html body{
     
     
     
-@media screen and (min-width:720px) and (max-width: 1080px){
+@media screen and (min-width:720px) and (max-width: 4320px){
 
 
     .header{
         width: 100%;
-        margin-top: 16px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        padding-top: 1em;
+
       
     }
     .opennav{
@@ -238,8 +257,11 @@ html body{
     }
     .logo{
         width: 100%;
-        height: auto; 
-        text-align: center;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
        
     }
     
@@ -351,19 +373,19 @@ html body{
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         border-top: 0.1px solid #111111;
-        align-items: center;
      
     }
     
     .network-box{
         width: 100%;
-        height: auto;
+        padding-top: 0.3em;
+    
     }
     
     .network-box-items{
-        width: 10%;
+        width: 2em;
         height: auto;
         display: flex;
         flex-direction: row;
@@ -386,6 +408,7 @@ html body{
         height: 0.1px;
         background: #111111; /* Change to the color of your underline */
         transition: width 0.3s ease-in-out;
+        
     }
     
     .network-box-items a:hover::after {
@@ -400,10 +423,11 @@ html body{
     .copyright{
         width: 100%;
     
+    
     }
     
     .copyright h6{
-        font-size: 0.4rem;
+        font-size: 0.4em;
         text-align: center;
     
     }
@@ -411,195 +435,11 @@ html body{
 }
 
 /*****************************************/
-    
-    
-    
-@media screen and (min-width:1080px) and (max-width: 4320px){
 
+    
+@media screen and (min-width:4320px) {
 
-    .header{
-        width: 100%;
-        margin-top: 16px;
-      
-    }
-    .opennav{
-        font-size: 0rem;
-        visibility: hidden;
-    }
-    .logo{
-        width: 100%;
-        height: auto; 
-        text-align: center;
-       
-    }
-    
-    .logo img{
-        width: 16%;
-        height: auto;
-      
-    }
-    
-    .sidenav{
-        width: 100%;
-        height: auto;
-      
-    }
-            
-    .sidenav .closebtn {
-        font-size: 0rem;
-        visibility: hidden;
-    }
-            
-    .nav-list {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        width: 100%;
-        margin: 0;  /* Ensure no margin at the top */
-        padding: 0; /* Already present in your code */
-       
-    }
-            
-    .nav-item {
-        position: relative;
-        width: 100%;
-    
-    }
-            
-    .nav-item a {
-        display: block;
-        color: #111111;
-        text-align: center;
-        text-decoration: none;
-        position: relative; /* To position the underline */
-        padding-bottom: 6px; /* Space for underline */
-    }
-            
-    /* Underline effect using ::after pseudo-element */
-    .dropdown-menu a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0; /* Initially no underline */
-        height: 0.1px; /* Thickness of the underline */
-        background-color: #111111;
-        transition: width 0.3s ease; /* Smooth animation */
-    }
-    
-    /* Expand underline on hover */
-    .dropdown-menu a:hover::after {
-        width: 100%; /* Full width on hover */
-    }
-    
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        padding: 0;
-    }
-            
-    .dropdown-menu li {
-        padding: 6px 0px;
-        list-style-type: none;
-        background-color: #ffffff;
-        opacity: 1;
-    }
-    .nav-item .dropdown-toggle {
-        font-size: 0.8rem; /* Adjust as needed */
-    }
-    
-    .nav-item .dropdown-menu li a {
-        font-size: 0.7rem; /* Adjust as needed */
-    }   
-    .gallery-box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 16px;
-        justify-content: center;
-        
-    }
-    
-    .image-gallery {
-        flex: 1 1 calc(33.333% - 16px); /* Each item takes roughly 33% of the available width minus the gap */
-        max-width: 100%; /* Set a maximum width to avoid overly large images */
-        box-sizing: border-box;
-        height: auto;
-       
-    }
-    
-    .image-gallery img {
-        width: 100%; /* Makes the image responsive */
-        height: auto; /* Ensures aspect ratio is maintained */
-        border-radius: 8px; /* Optional: gives rounded corners */
-        display: block; /* Removes any extra space below images */
-        margin-bottom: 16px; /* Adds space between images */
-    }
-    .footer{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        border-top: 0.1px solid #111111;
-        align-items: center;
-        padding: 30px 0;
-     
-    }
-    
-    .network-box{
-        width: 100%;
-        height: auto;
-    }
-    
-    .network-box-items{
-        width: 10%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        gap: 6px;
-        
-    }
-    
-    .network-box-items a {
-        position: relative;
-        text-decoration: none;
-    }
-    
-    .network-box-items a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 0.1px;
-        background: #111111; /* Change to the color of your underline */
-        transition: width 0.3s ease-in-out;
-    }
-    
-    .network-box-items a:hover::after {
-        width: 100%;
-    }
-      .network-box-items img {
-        width: 100%; /* Makes the image fill the container */
-        height: auto; /* Maintains aspect ratio */
-        display: block;
-      }
-      
-    .copyright{
-        width: 100%;
-    
-    }
-    
-    .copyright h6{
-        font-size: 0.rem;
-        text-align: center;
-    
-    }
-    
+body{
+    visibility: hidden;
 }
-
-
-
+}
