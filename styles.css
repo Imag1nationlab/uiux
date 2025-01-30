@@ -333,17 +333,17 @@ html body{
     }
             
     .dropdown-menu li {
-        padding: 6px 0px;
+        padding: 16px 0px;
         list-style-type: none;
         background-color: #ffffff;
         opacity: 1;
     }
     .nav-item .dropdown-toggle {
-        font-size: 0.5rem; /* Adjust as needed */
+        font-size: 0.8em; /* Adjust as needed */
     }
     
     .nav-item .dropdown-menu li a {
-        font-size: 0.4rem; /* Adjust as needed */
+        font-size: 0.7em; /* Adjust as needed */
     }   
     .gallery-box {
         display: flex;
