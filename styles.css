@@ -165,7 +165,7 @@ html body{
 .image-gallery img {
     width: 100%; /* Makes the image responsive */
     height: auto; /* Ensures aspect ratio is maintained */
-    border-radius: 8px; /* Optional: gives rounded corners */
+    border-radius: 3px; /* Optional: gives rounded corners */
     display: block; /* Removes any extra space below images */
     margin-bottom: 16px; /* Adds space between images */
 }
@@ -365,7 +365,7 @@ html body{
     .image-gallery img {
         width: 100%; /* Makes the image responsive */
         height: auto; /* Ensures aspect ratio is maintained */
-        border-radius: 8px; /* Optional: gives rounded corners */
+        border-radius: 6px; /* Optional: gives rounded corners */
         display: block; /* Removes any extra space below images */
         margin-bottom: 16px; /* Adds space between images */
     }
